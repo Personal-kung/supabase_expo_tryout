@@ -40,11 +40,17 @@ Until here, the data will **NOT** be retrived, because of limitations from supab
 ## Enabling Data reading from supabase
 - log into the database and table >> RSS policy
 - Create New Policy with the following commands
+```
+alter policy "Public connection"
+on "public"."base data"
+to public
+using (true);
+```
 Public Name: Public connection
-Table: <table name>
-Policy Behaviour: Permissive
-Policy Command: Select
-Target Roles: Defaults to all
-Using: True
+<br>Table: <table name>
+<br>Policy Behaviour: Permissive
+<br>Policy Command: Select
+<br>Target Roles: Defaults to all
+<br>Using: True
 
 
